@@ -17,7 +17,6 @@ This website provides information about the chapter, its projects, events, and w
 ├── About Us
 ├── Projects
 ├── Events
-    ├── Past Events
 ├── Join Us
 └── Contact
 ```
