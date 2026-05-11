@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+  /* EWB & YorkU Primary Colors */
+  --color-ewb-blue: #1d3359;
+  --color-ewb-gold: #c27b3a;
+  --color-york-red: #bc1d24;
+  
+  /* Lassonde Accents from your screenshot */
+  --color-lassonde-navy: #003366;
+  --color-lassonde-teal: #339999;
+  --color-lassonde-plum: #993366;
+}
+
+/* Let's make the default background slightly off-white for a premium feel */
+body {
+  @apply bg-gray-50;
+}
