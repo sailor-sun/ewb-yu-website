@@ -65,7 +65,7 @@ function App() {
             <div className="h-10 w-[1px] bg-gray-300 hidden sm:block"></div>
             <div>
               <h1 className="font-bold text-lg tracking-wider text-gray-900 leading-none">EWB</h1>
-              <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mt-1">York Chapter</p>
+              <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mt-1">York University Chapter</p>
             </div>
           </div>
 
