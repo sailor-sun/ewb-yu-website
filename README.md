@@ -21,6 +21,9 @@ This website provides information about the chapter, its projects, events, and w
 ```
 
 ## Tech Stack
+- React
+- Cloudflare Pages
 
-
-Maintained by EWB YorkU
+This website was developed by the Engineers Without Borders team.
+- Project Lead
+- Team members
