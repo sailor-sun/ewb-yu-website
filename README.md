@@ -1,29 +1,16 @@
-# Engineers Without Borders – York University Chapter Official Website
+# React + Vite
 
-## About
-This repository contains the official website for the Engineers Without Borders (EWB) York University Chapter.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-EWB YU is a student community focused on creating system-based solutions that address the root causes of issues in our university, local, and global communities. The chapter incubates impactful projects, runs events and workshops, and supports the personal development of its members.
+Currently, two official plugins are available:
 
-This website provides information about the chapter, its projects, events, and ways to get involved.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
----
+## React Compiler
 
-## Website Structure
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-```
-/
-├── Home
-├── About Us
-├── Events
-├── Join Us
-└── Contact
-```
+## Expanding the ESLint configuration
 
-## Tech Stack
-- React
-- Cloudflare Pages
-
-This website was developed by the Engineers Without Borders team.
-- Project Lead
-- Team members
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
