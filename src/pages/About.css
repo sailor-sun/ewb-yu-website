@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+
+/* ─────────────────────── ABOUT / HERO ─────────────────────── */
+
+.hero {
+  /* Theme colours */
+  --navy: #003366;
+  --navy-2: #1e3a5f;
+  --red: #bc1d24;
+  --orange: #c27b3a;
+
+  --primary: #003366;
+  --primary-2: #1e3a5f;
+  --accent: #bc1d24;
+  --secondary: #c27b3a;
+
+  --bg-main: #f3f4f2;
+  --bg-card: #ffffff;
+
+  --text-main: #121417;
+  --text-muted: #2f3947;
+
+  --border-light: #d1d5db;
+  --border-strong: #c3c7d1;
+
+  --shadow-xs: 0 1px 2px rgba(0, 51, 102, 0.05);
+
+  --shadow-sm:
+    0 4px 14px rgba(0, 51, 102, 0.06);
+
+  --shadow-md:
+    0 12px 30px rgba(0, 51, 102, 0.08),
+    0 4px 8px rgba(0, 51, 102, 0.04);
+
+  --shadow-lg:
+    0 28px 60px -10px rgba(0, 51, 102, 0.12),
+    0 10px 20px -8px rgba(188, 29, 36, 0.08);
+
+  --radius-lg: 28px;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  position: relative;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding:
+    8rem
+    clamp(1rem, 4vw, 2.5rem)
+    5rem;
+
+  text-align: left;
+
+  font-family:
+    'Plus Jakarta Sans',
+    system-ui,
+    sans-serif;
+
+  color: var(--text-main);
+
+  isolation: isolate;
+}
+
+
+/* ─────────────────────── LOGO ─────────────────────── */
+
+.hero__logo-stage {
+  position: relative;
+
+  width: 110px;
+  height: 110px;
+
+  margin-bottom: 2rem;
+
+  display: grid;
+  place-items: center;
+}
+
+
+.hero__logo-glow {
+  position: absolute;
+
+  inset: -20px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(194, 123, 58, 0.35) 0%,
+      rgba(188, 29, 36, 0.15) 40%,
+      transparent 70%
+    );
+
+  filter: blur(20px);
+
+  animation: about-pulse 4s ease-in-out infinite;
+
+  z-index: -1;
+}
+
+
+@keyframes about-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+}
+
+
+.hero__logo {
+  width: 110px;
+  height: 110px;
+
+  object-fit: contain;
+
+  border-radius: 24px;
+
+  background: var(--bg-card);
+
+  border: 1px solid var(--border-light);
+
+  box-shadow: var(--shadow-md);
+
+  padding: 8px;
+}
+
+
+/* ─────────────────────── EYEBROW ─────────────────────── */
+
+.hero__eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  color: var(--accent);
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.5px;
+
+  font-size: 0.78rem;
+
+  margin: 0 0 1.25rem 0;
+
+  padding: 0.4rem 0.85rem;
+
+  border-radius: 999px;
+
+  background:
+    color-mix(
+      in srgb,
+      var(--accent) 12%,
+      transparent
+    );
+
+  border:
+    1px solid
+    color-mix(
+      in srgb,
+      var(--accent) 30%,
+      transparent
+    );
+}
+
+
+/* ─────────────────────── TITLE ─────────────────────── */
+
+.hero__title {
+  font-size:
+    clamp(
+      2.6rem,
+      7vw,
+      4.75rem
+    );
+
+  font-weight: 800;
+
+  line-height: 1.05;
+
+  letter-spacing: -1.5px;
+
+  margin: 0 0 1.5rem 0;
+
+  color: var(--text-main);
+}
+
+
+.hero__accent {
+  position: relative;
+
+  display: inline-block;
+
+  background:
+    linear-gradient(
+      120deg,
+      var(--primary),
+      var(--secondary) 60%,
+      var(--accent)
+    );
+
+  background-size: 200% 100%;
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation:
+    about-shimmer
+    6s
+    ease-in-out
+    infinite;
+}
+
+
+@keyframes about-shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+
+/* ─────────────────────── DESCRIPTION ─────────────────────── */
+
+.hero__lede {
+  font-size: 1.15rem;
+
+  color: var(--text-muted);
+
+  max-width: 620px;
+
+  margin: 0 0 2rem 0;
+
+  line-height: 1.6;
+}
+
+
+/* ─────────────────────── BUTTONS ─────────────────────── */
+
+.hero__cta-row {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.75rem;
+
+  margin-bottom: 3rem;
+}
+
+
+.hero .btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  padding:
+    0.85rem
+    1.4rem;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+
+  font-size: 0.9rem;
+
+  text-decoration: none;
+
+  border: 1px solid transparent;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s var(--ease),
+    box-shadow 0.25s var(--ease),
+    background 0.25s var(--ease),
+    border-color 0.25s var(--ease);
+}
+
+
+.hero .btn--primary {
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--primary-2)
+    );
+
+  color: white;
+
+  box-shadow: var(--shadow-md);
+}
+
+
+.hero .btn--primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow: var(--shadow-lg);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--accent),
+      var(--secondary)
+    );
+}
+
+
+.hero .btn--ghost {
+  background: var(--bg-card);
+
+  color: var(--text-main);
+
+  border-color: var(--border-strong);
+
+  box-shadow: var(--shadow-xs);
+}
+
+
+.hero .btn--ghost:hover {
+  transform: translateY(-2px);
+
+  border-color: var(--secondary);
+
+  color: var(--secondary);
+
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* ─────────────────────── STATS ─────────────────────── */
+
+.hero__stats {
+  list-style: none;
+
+  margin: 0;
+
+  padding: 1.5rem;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      3,
+      1fr
+    );
+
+  gap: 1rem;
+
+  background:
+    color-mix(
+      in srgb,
+      var(--bg-card) 65%,
+      transparent
+    );
+
+  border:
+    1px solid
+    var(--border-light);
+
+  border-radius:
+    var(--radius-lg);
+
+  -webkit-backdrop-filter:
+    blur(10px);
+
+  backdrop-filter:
+    blur(10px);
+
+  box-shadow:
+    var(--shadow-sm);
+
+  max-width: 620px;
+}
+
+
+.hero__stat {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 0.15rem;
+}
+
+
+.hero__stat-value {
+  font-size:
+    clamp(
+      1.5rem,
+      3vw,
+      2rem
+    );
+
+  font-weight: 800;
+
+  letter-spacing: -1px;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--secondary)
+    );
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+.hero__stat-label {
+  font-size: 0.78rem;
+
+  color: var(--text-muted);
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+
+  font-weight: 600;
+}
+
+
+/* ─────────────────────── MOBILE ─────────────────────── */
+
+@media (max-width: 640px) {
+
+  .hero {
+    padding-top: 5rem;
+  }
+
+  .hero__stats {
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+  }
+
+  .hero__title {
+    letter-spacing: -1px;
+  }
+
+}
