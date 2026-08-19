@@ -60,12 +60,12 @@ function Navbar() {
               Events
             </Link>
 
-            <a
-              href="#join"
+            <Link
+              to="/join"
               className="hover:text-york-red transition-colors py-2"
             >
               Join
-            </a>
+            </Link>
 
             <a
               href="#contact"
