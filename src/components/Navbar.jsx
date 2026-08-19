@@ -43,7 +43,7 @@ function Navbar() {
               to="/about"
               className="hover:text-york-red transition-colors py-2"
             >
-              Mission
+              About
             </Link>
 
             <a
