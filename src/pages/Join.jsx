@@ -112,14 +112,14 @@ function Join() {
         </p>
       </main>
 
-      {/* --- STEP 01 & 02: GENERAL MEMBERSHIP + MAILING LIST --- */}
+      {/* --- STEP 01 & 02: FOLLOW US + GENERAL MEMBERSHIP --- */}
       <section className="max-w-7xl mx-auto px-6 pb-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-          {/* General Membership */}
+          {/* Follow Us */}
           <div className="border-[2px] border-black bg-white p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.05)]">
             <span className="text-york-red font-bold text-xs uppercase tracking-wider">
-              Step 01 — General Membership
+              Step 01 — Follow Us
             </span>
 
             <h3 className="text-2xl md:text-3xl font-black text-gray-900 uppercase mt-3 tracking-tight">
@@ -127,43 +127,63 @@ function Join() {
             </h3>
 
             <p className="text-gray-600 mt-4 leading-relaxed">
-              No forms, no fees. Follow us on Instagram to stay in the loop on
+              No forms, no fees. Follow us on Instagram or Facebook to stay in the loop on
               meetings, workshops, and events — that's it, you're a member.
             </p>
+<div className="flex flex-col items-start gap-3 mt-6">
+  <a
+    href="https://www.instagram.com/ewb.yorku/"
+    target="_blank"
+    rel="noreferrer"
+    className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-york-red transition-colors group"
+  >
+    INSTAGRAM
+    <span className="group-hover:translate-x-1 transition-transform">
+      →
+    </span>
+  </a>
 
-            <a
-              href="https://www.instagram.com/ewb.york/"
+  <a
+    href="https://www.facebook.com/ewbyork/"
+    target="_blank"
+    rel="noreferrer"
+    className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-york-red transition-colors group"
+  >
+    FACEBOOK
+    <span className="group-hover:translate-x-1 transition-transform">
+      →
+    </span>
+  </a>
+</div>
+          </div>
+
+          {/* General Membership */}
+          <div className="border-[2px] border-black bg-white p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.05)]">
+            <span className="text-york-red font-bold text-xs uppercase tracking-wider">
+              Step 02 — General Membership
+            </span>
+
+            <h3 className="text-2xl md:text-3xl font-black text-gray-900 uppercase mt-3 tracking-tight">
+              Join as a General Member. 
+            </h3>
+
+            <p className="text-gray-600 mt-4 leading-relaxed">
+              Join EWB York through the Connect Lassonde platform to officially become a general member and get involved with the club.
+            </p>
+
+                        <a
+              href="https://connect.lassonde.yorku.ca/feeds?type=club&type_id=27815&tab=about"
               target="_blank"
               rel="noreferrer"
               className="mt-6 inline-flex items-center gap-2 bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-york-red transition-colors group"
             >
-              @ewb.york
+              EWB @ YorkU
               <span className="group-hover:translate-x-1 transition-transform">
                 →
               </span>
             </a>
 
-            <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mt-6">
-              Meetings · Thursdays · 6 PM · Bergeron 102
-            </p>
-          </div>
-
-          {/* Mailing List */}
-          <div className="border-[2px] border-black bg-white p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,0.05)]">
-            <span className="text-york-red font-bold text-xs uppercase tracking-wider">
-              Step 02 — Mailing List
-            </span>
-
-            <h3 className="text-2xl md:text-3xl font-black text-gray-900 uppercase mt-3 tracking-tight">
-              Stay updated.
-            </h3>
-
-            <p className="text-gray-600 mt-4 leading-relaxed">
-              Subscribe for event reminders, project updates, and application
-              windows straight to your inbox.
-            </p>
-
-            <form
+            {/* <form
               onSubmit={handleSubscribe}
               className="mt-6 flex flex-col sm:flex-row gap-3"
             >
@@ -181,8 +201,8 @@ function Join() {
                 className="bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-york-red transition-colors whitespace-nowrap"
               >
                 Subscribe
-              </button>
-            </form>
+              </button> 
+            </form>*/}
 
             {submitted && (
               <p className="text-york-red text-xs font-bold uppercase tracking-widest mt-4">
@@ -206,7 +226,7 @@ function Join() {
             </span>
 
             <h2 className="text-6xl sm:text-7xl lg:text-8xl font-black tracking-tight uppercase leading-none">
-              OPEN
+              OPEN ROLES
             </h2>
 
             <h2 className="text-6xl sm:text-7xl lg:text-8xl font-black tracking-tight text-outline-white uppercase leading-none hidden sm:inline">
@@ -222,49 +242,56 @@ function Join() {
         </div>
       </div>
 
-      {/* --- OPEN ROLES GRID --- */}
-      <section className="py-20 bg-gray-50 px-6 relative z-10">
+{/* --- OPEN ROLES GRID --- */}
+<section className="py-20 bg-gray-50 px-6 relative z-10 text-center">
 
-        <div className="max-w-7xl mx-auto">
+  {/* Role boxes temporarily hidden */}
+  {/*
+  <div className="max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {roles.map((role) => (
+        <div
+          key={role.title}
+          className="bg-white border border-gray-100 rounded-xl overflow-hidden p-6 flex flex-col justify-between shadow-sm hover:shadow-xl transition-shadow"
+        >
+          <div>
+            <span className="text-york-red font-bold text-xs uppercase tracking-wider">
+              {role.tag}
+            </span>
 
-            {roles.map((role) => (
-              <div
-                key={role.title}
-                className="bg-white border border-gray-100 rounded-xl overflow-hidden p-6 flex flex-col justify-between shadow-sm hover:shadow-xl transition-shadow"
-              >
-                <div>
-                  <span className="text-york-red font-bold text-xs uppercase tracking-wider">
-                    {role.tag}
-                  </span>
+            <h3 className="text-xl font-bold mt-2 text-gray-900">
+              {role.title}
+            </h3>
 
-                  <h3 className="text-xl font-bold mt-2 text-gray-900">
-                    {role.title}
-                  </h3>
-
-                  <p className="text-gray-600 mt-3 text-sm leading-relaxed">
-                    {role.blurb}
-                  </p>
-                </div>
-
-                <a
-                  href={`mailto:york@ewb.ca?subject=${encodeURIComponent(
-                    `Application — ${role.title}`
-                  )}`}
-                  className="mt-6 inline-flex items-center justify-between bg-black text-white px-5 py-3 text-xs font-bold uppercase tracking-widest hover:bg-york-red transition-colors group"
-                >
-                  Apply
-                  <span className="group-hover:translate-x-1 transition-transform">
-                    →
-                  </span>
-                </a>
-              </div>
-            ))}
-
+            <p className="text-gray-600 mt-3 text-sm leading-relaxed">
+              {role.blurb}
+            </p>
           </div>
+
+          <a
+            href={`mailto:york@ewb.ca?subject=${encodeURIComponent(
+              `Application — ${role.title}`
+            )}`}
+            className="mt-6 inline-flex items-center justify-between bg-black text-white px-5 py-3 text-xs font-bold uppercase tracking-widest hover:bg-york-red transition-colors group"
+          >
+            Apply
+            <span className="group-hover:translate-x-1 transition-transform">
+              →
+            </span>
+          </a>
         </div>
-      </section>
+      ))}
+
+    </div>
+  </div>
+  */}
+
+  <p className="text-gray-500 text-lg font-bold uppercase tracking-widest">
+    No roles currently available.
+  </p>
+
+</section>
 
       {/* --- FOOTER --- */}
       <footer className="bg-white border-t border-gray-100 py-12 text-center relative z-10">
