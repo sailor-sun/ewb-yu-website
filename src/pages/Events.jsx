@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 import xchangeImg from "./assets/xchange.avif";
 import legoImg from "./assets/lego.jpg";
@@ -369,12 +370,7 @@ function Events() {
         </div>
       </section>
 
-      {/* --- FOOTER --- */}
-      <footer className="bg-white border-t border-gray-100 py-12 text-center relative z-10">
-        <p className="text-gray-400 text-xs tracking-widest uppercase font-semibold">
-          © 2026 EWB York University Chapter
-        </p>
-      </footer>
+      <Footer />
 
     </div>
   );

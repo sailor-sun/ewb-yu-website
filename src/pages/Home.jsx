@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -128,6 +129,123 @@ function Home() {
 
         </div>
       </main>
+
+      {/* --- WHAT WE BUILD / PORTFOLIO --- */}
+      <section className="bg-black text-white py-20 md:py-28 px-6 relative z-10">
+        <div className="max-w-7xl mx-auto">
+
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
+            <div>
+              <p className="text-york-red font-bold text-xs uppercase tracking-widest mb-3">
+                § 02 — Portfolio
+              </p>
+
+              <h2 className="text-6xl sm:text-7xl xl:text-8xl font-black tracking-tighter uppercase leading-[0.9]">
+                What We Build.
+              </h2>
+            </div>
+
+            <p className="text-gray-400 italic font-serif text-lg">
+              — A field log, 2026
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/15">
+
+            {/* Project 1 */}
+            <div className="pt-10 md:pt-0 md:px-10 first:md:pl-0 last:md:pr-0">
+              <div className="flex items-center justify-between mb-8">
+                <span className="border border-white/30 text-white/80 text-[10px] font-bold uppercase tracking-widest px-3 py-1">
+                  Water
+                </span>
+
+                <span className="text-4xl font-black text-white/20">01</span>
+              </div>
+
+              <h3 className="text-3xl font-bold uppercase tracking-tight leading-[1.05] mb-4">
+                Lilongwe
+                <br />
+                Filtration
+              </h3>
+
+              <p className="text-gray-400 leading-relaxed mb-6">
+                Co-designed low-cost ceramic filters with three village
+                councils.
+              </p>
+
+              <a
+                href="#"
+                className="text-xs font-bold uppercase tracking-widest text-white hover:text-york-red transition-colors inline-flex items-center gap-2"
+              >
+                Read Brief
+                <span>→</span>
+              </a>
+            </div>
+
+            {/* Project 2 */}
+            <div className="pt-10 md:pt-0 md:px-10 first:md:pl-0 last:md:pr-0">
+              <div className="flex items-center justify-between mb-8">
+                <span className="border border-white/30 text-white/80 text-[10px] font-bold uppercase tracking-widest px-3 py-1">
+                  Policy
+                </span>
+
+                <span className="text-4xl font-black text-white/20">02</span>
+              </div>
+
+              <h3 className="text-3xl font-bold uppercase tracking-tight leading-[1.05] mb-4">
+                Fair Trade
+                <br />
+                Audit
+              </h3>
+
+              <p className="text-gray-400 leading-relaxed mb-6">
+                Open dataset on supply-chain transparency for student
+                procurement.
+              </p>
+
+              <a
+                href="#"
+                className="text-xs font-bold uppercase tracking-widest text-white hover:text-york-red transition-colors inline-flex items-center gap-2"
+              >
+                Read Brief
+                <span>→</span>
+              </a>
+            </div>
+
+            {/* Project 3 */}
+            <div className="pt-10 md:pt-0 md:px-10 first:md:pl-0 last:md:pr-0">
+              <div className="flex items-center justify-between mb-8">
+                <span className="border border-white/30 text-white/80 text-[10px] font-bold uppercase tracking-widest px-3 py-1">
+                  Energy
+                </span>
+
+                <span className="text-4xl font-black text-white/20">03</span>
+              </div>
+
+              <h3 className="text-3xl font-bold uppercase tracking-tight leading-[1.05] mb-4">
+                Solar
+                <br />
+                Microgrid
+              </h3>
+
+              <p className="text-gray-400 leading-relaxed mb-6">
+                Pilot 4kW community grid serving a school in northern Ghana.
+              </p>
+
+              <a
+                href="#"
+                className="text-xs font-bold uppercase tracking-widest text-white hover:text-york-red transition-colors inline-flex items-center gap-2"
+              >
+                Read Brief
+                <span>→</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <Footer />
 
     </div>
   );
