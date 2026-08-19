@@ -1,6 +1,10 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 
+import xchangeImg from "./assets/xchange.avif";
+import legoImg from "./assets/lego.jpg";
+import fundraiserImg from "./assets/fundraiser.jpg";
+
 function Events() {
   return (
     <div className="min-h-screen bg-[#fafafa] font-sans antialiased relative overflow-x-hidden selection:bg-york-red selection:text-white">
@@ -59,7 +63,7 @@ function Events() {
       <Navbar />
 
       {/* --- HUGE, BOLD RED SECTION IDENTITY HEADER --- */}
-      <div className="bg-york-red text-white py-12 relative z-10 border-y-4 border-black select-none">
+      <div className="mt-8 bg-york-red text-white py-12 relative z-10 border-y-4 border-black select-none">
 
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-baseline justify-between gap-4">
 
@@ -99,18 +103,17 @@ function Events() {
 
             <div>
               <h3 className="text-3xl font-extrabold text-gray-900 tracking-tight">
-                Active & Upcoming Tracks
+                Our Events & Initiatives
               </h3>
 
-              <p className="text-gray-500 mt-2">
-                Hover over a card to view detailed event information live at
-                Lassonde
-              </p>
+              {/* <p className="text-gray-500 mt-2">
+                Hover over a card to view detailed event information
+              </p> */}
             </div>
 
-            <button className="text-york-red font-bold border-b-2 border-york-red pb-1 transition-all hover:pr-2">
+            {/* <button className="text-york-red font-bold border-b-2 border-york-red pb-1 transition-all hover:pr-2">
               View All Events
-            </button>
+            </button> */}
 
           </div>
 
@@ -119,15 +122,15 @@ function Events() {
             {/* Event Card 1 */}
             <div className="w-full h-[400px] perspective-1000 group">
 
-              <div className="w-full h-full relative transform-style-3d duration-700 group-hover:rotate-y-180 shadow-sm hover:shadow-xl rounded-xl">
-
+              {/* <div className="w-full h-full relative transform-style-3d duration-700 group-hover:rotate-y-180 shadow-sm hover:shadow-xl rounded-xl"> */}
+              <div className="w-full h-full relative transform-style-3d duration-700 shadow-sm hover:shadow-xl rounded-xl">
                 {/* FRONT */}
                 <div className="absolute w-full h-full bg-white border border-gray-100 rounded-xl overflow-hidden backface-hidden flex flex-col">
 
                   <div className="h-48 bg-gray-200 overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=400"
-                      alt="Lassonde Sustainability Hack"
+                      src={xchangeImg}
+                      alt="xChange Conference"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -136,27 +139,26 @@ function Events() {
 
                     <div>
                       <span className="text-york-red font-bold text-xs uppercase tracking-wider">
-                        HACKATHON
+                        CONFERENCE
                       </span>
 
                       <h3 className="text-xl font-bold mt-2 text-gray-900">
-                        Lassonde Sustainability Hack
+                        xChange Conference
                       </h3>
 
                       <p className="text-gray-600 mt-3 text-sm leading-relaxed">
-                        Ideating and prototyping sustainable eco-friendly
-                        systems right here on the YorkU campus.
+                        xChange is EWB Canada’s annual national conference, bringing together changemakers from across Canada to connect, learn, and take collective action on complex social challenges.
                       </p>
                     </div>
 
-                    <span className="text-york-red font-bold text-xs tracking-wider mt-4 block">
+                    {/* <span className="text-york-red font-bold text-xs tracking-wider mt-4 block">
                       HOVER TO FLIP →
-                    </span>
+                    </span> */}
 
                   </div>
                 </div>
 
-                {/* BACK */}
+                {/* BACK
                 <div className="absolute w-full h-full bg-york-red text-white rounded-xl overflow-hidden backface-hidden rotate-y-180 p-8 flex flex-col justify-between border border-black/10">
 
                   <div>
@@ -192,7 +194,7 @@ function Events() {
                     Register Now
                   </button>
 
-                </div>
+                </div> */}
 
               </div>
             </div>
@@ -200,15 +202,15 @@ function Events() {
             {/* Event Card 2 */}
             <div className="w-full h-[400px] perspective-1000 group">
 
-              <div className="w-full h-full relative transform-style-3d duration-700 group-hover:rotate-y-180 shadow-sm hover:shadow-xl rounded-xl">
-
+              {/* <div className="w-full h-full relative transform-style-3d duration-700 group-hover:rotate-y-180 shadow-sm hover:shadow-xl rounded-xl"> */}
+              <div className="w-full h-full relative transform-style-3d duration-700 shadow-sm hover:shadow-xl rounded-xl">
                 {/* FRONT */}
                 <div className="absolute w-full h-full bg-white border border-gray-100 rounded-xl overflow-hidden backface-hidden flex flex-col">
 
                   <div className="h-48 bg-gray-200 overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1591453089816-0fbb971b454c?q=80&w=400"
-                      alt="YU Global Clean Water Initiative"
+                      src={fundraiserImg}
+                      alt="Fundraiser"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -217,27 +219,26 @@ function Events() {
 
                     <div>
                       <span className="text-york-red font-bold text-xs uppercase tracking-wider">
-                        DESIGN CHALLENGE
+                        FUNDRAISER
                       </span>
 
                       <h3 className="text-xl font-bold mt-2 text-gray-900">
-                        YU Global Clean Water Initiative
+                        Charity Fundraiser
                       </h3>
 
                       <p className="text-gray-600 mt-3 text-sm leading-relaxed">
-                        Connecting student teams with structural resource goals
-                        to engineer clean fluid networks.
+                        We host fundraisers that support meaningful causes, like our fundraiser for Kids in Tech, which helps empower youth to become future technology leaders.
                       </p>
                     </div>
 
-                    <span className="text-york-red font-bold text-xs tracking-wider mt-4 block">
+                    {/* <span className="text-york-red font-bold text-xs tracking-wider mt-4 block">
                       HOVER TO FLIP →
-                    </span>
+                    </span> */}
 
                   </div>
                 </div>
 
-                {/* BACK */}
+                {/* BACK
                 <div className="absolute w-full h-full bg-york-red text-white rounded-xl overflow-hidden backface-hidden rotate-y-180 p-8 flex flex-col justify-between border border-black/10">
 
                   <div>
@@ -275,7 +276,7 @@ function Events() {
                     Join A Team
                   </button>
 
-                </div>
+                </div> */}
 
               </div>
             </div>
@@ -283,15 +284,15 @@ function Events() {
             {/* Event Card 3 */}
             <div className="w-full h-[400px] perspective-1000 group">
 
-              <div className="w-full h-full relative transform-style-3d duration-700 group-hover:rotate-y-180 shadow-sm hover:shadow-xl rounded-xl">
-
+              {/* <div className="w-full h-full relative transform-style-3d duration-700 group-hover:rotate-y-180 shadow-sm hover:shadow-xl rounded-xl"> */}
+              <div className="w-full h-full relative transform-style-3d duration-700 shadow-sm hover:shadow-xl rounded-xl">
                 {/* FRONT */}
                 <div className="absolute w-full h-full bg-white border border-gray-100 rounded-xl overflow-hidden backface-hidden flex flex-col">
 
                   <div className="h-48 bg-gray-200 overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?q=80&w=400"
-                      alt="Human-Centered Design Workshop"
+                      src={legoImg}
+                      alt="Lego Design Challenge"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -301,29 +302,28 @@ function Events() {
                     <div>
 
                       <span className="text-york-red font-bold text-xs uppercase tracking-wider">
-                        WORKSHOP
+                        SOCIAL EVENT
                       </span>
 
                       <h3 className="text-xl font-bold mt-2 text-gray-900">
-                        Human-Centered Design Workshop
+                        Lego Design Challenge
                       </h3>
 
                       <p className="text-gray-600 mt-3 text-sm leading-relaxed">
-                        Mastering systems-based engineering frameworks built
-                        directly around actual community needs.
+                        Our LEGO de-stressor is one of our most popular events, giving students a fun way to relax, get creative, build their own LEGO designs, and compete for prizes in a friendly challenge.
                       </p>
 
                     </div>
 
-                    <span className="text-york-red font-bold text-xs tracking-wider mt-4 block">
+                    {/* <span className="text-york-red font-bold text-xs tracking-wider mt-4 block">
                       HOVER TO FLIP →
-                    </span>
+                    </span> */}
 
                   </div>
 
                 </div>
 
-                {/* BACK */}
+                {/* BACK
                 <div className="absolute w-full h-full bg-york-red text-white rounded-xl overflow-hidden backface-hidden rotate-y-180 p-8 flex flex-col justify-between border border-black/10">
 
                   <div>
@@ -360,7 +360,7 @@ function Events() {
                     Save a Seat
                   </button>
 
-                </div>
+                </div> */}
 
               </div>
             </div>
