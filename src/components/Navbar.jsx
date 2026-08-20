@@ -20,7 +20,7 @@ function Navbar() {
 
             <div>
               <h1 className="font-bold text-lg tracking-wider text-gray-900 leading-none">
-                EWB
+                Engineers Without Borders
               </h1>
 
               <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold mt-1">

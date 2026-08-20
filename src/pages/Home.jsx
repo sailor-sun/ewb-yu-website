@@ -78,7 +78,7 @@ function Home() {
 
             <div className="flex items-center gap-3 text-xs font-bold tracking-widest text-gray-500 uppercase mb-4">
               <div className="w-10 h-[1.5px] bg-gray-900"></div>
-              <span>Chapter № 017 / York U</span>
+              <span> York U</span> 
             </div>
 
             <h1 className="text-6xl sm:text-7xl xl:text-8xl font-black tracking-tighter text-york-red uppercase leading-[0.85]">
@@ -100,9 +100,6 @@ function Home() {
 
             <div className="relative border-[2px] border-black p-0 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,0.05)] overflow-hidden group">
 
-              <span className="absolute top-3 left-3 bg-york-red text-white text-[10px] font-bold tracking-widest px-3 py-1 uppercase z-10">
-                Field 2026
-              </span>
 
               <div className="overflow-hidden aspect-[4/3]">
                 <img
@@ -114,15 +111,20 @@ function Home() {
 
             </div>
 
+            {/* <span className="text-york-red font-bold not-italic font-sans text-lg tracking-wide uppercase">
+                test
+              </span>{" "} */}
             <p className="text-xl md:text-2xl font-medium text-gray-800 italic leading-relaxed font-serif pl-2 border-l-4 border-york-red">
-              We are student engineers building{" "}
-              <span className="text-york-red font-bold not-italic font-sans text-lg tracking-wide uppercase">
-                Equitable
-              </span>{" "}
-              systems with the communities we serve —{" "}
-              <span className="font-semibold text-gray-900">
-                not for them.
-              </span>
+              We are EWB YorkU, a student chapter of{" "}
+              <a
+                href="https://www.ewb.ca/en/"
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold underline hover:text-york-red transition-colors"
+              >
+                Engineers Without Borders Canada
+              </a>
+              , empowering students to turn ideas into meaningful impact.
             </p>
 
           </div>
@@ -137,17 +139,14 @@ function Home() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
             <div>
               <p className="text-york-red font-bold text-xs uppercase tracking-widest mb-3">
-                § 02 — Portfolio
+               — Portfolio
               </p>
 
               <h2 className="text-6xl sm:text-7xl xl:text-8xl font-black tracking-tighter uppercase leading-[0.9]">
-                What We Build.
+                Milestones
               </h2>
             </div>
 
-            <p className="text-gray-400 italic font-serif text-lg">
-              — A field log, 2026
-            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/15">
@@ -173,13 +172,13 @@ function Home() {
                 councils.
               </p>
 
-              <a
+              {/* <a
                 href="#"
                 className="text-xs font-bold uppercase tracking-widest text-white hover:text-york-red transition-colors inline-flex items-center gap-2"
               >
                 Read Brief
                 <span>→</span>
-              </a>
+              </a> */}
             </div>
 
             {/* Project 2 */}
@@ -203,13 +202,13 @@ function Home() {
                 procurement.
               </p>
 
-              <a
+              {/* <a
                 href="#"
                 className="text-xs font-bold uppercase tracking-widest text-white hover:text-york-red transition-colors inline-flex items-center gap-2"
               >
                 Read Brief
                 <span>→</span>
-              </a>
+              </a> */}
             </div>
 
             {/* Project 3 */}
@@ -232,13 +231,13 @@ function Home() {
                 Pilot 4kW community grid serving a school in northern Ghana.
               </p>
 
-              <a
+              {/* <a
                 href="#"
                 className="text-xs font-bold uppercase tracking-widest text-white hover:text-york-red transition-colors inline-flex items-center gap-2"
               >
                 Read Brief
                 <span>→</span>
-              </a>
+              </a> */}
             </div>
 
           </div>

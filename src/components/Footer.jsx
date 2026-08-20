@@ -22,7 +22,6 @@ function Footer() {
           <div className="lg:col-span-7">
             <h2 className="text-6xl sm:text-7xl font-black tracking-tighter text-gray-900 uppercase leading-[0.9]">
               EWB <span className="text-york-red">×</span> York
-              <br />
               U.
             </h2>
 
@@ -47,25 +46,25 @@ function Footer() {
                     href="mailto:york@ewb.ca"
                     className="hover:text-york-red transition-colors"
                   >
-                    york@ewb.ca
+                    yorku@chapter.ewb.ca
                   </a>
                 </li>
 
                 <li>
                   <a
-                    href="https://www.instagram.com/ewb.yorku/"
+                    href="https://www.instagram.com/ewbyorku/"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-york-red transition-colors"
                   >
-                    @ewb.yorku
+                    @ewbyorku
                   </a>
                 </li>
 
-                <li>LinkedIn / EWB-York</li>
+                <li>Facebook / EWBYork</li>
               </ul>
             </div>
-
+{/* 
             <div>
               <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">
                 Meet
@@ -76,7 +75,7 @@ function Footer() {
                 <li>Bergeron 102</li>
                 <li>All Faculties Welcome</li>
               </ul>
-            </div>
+            </div> */}
 
           </div>
 
