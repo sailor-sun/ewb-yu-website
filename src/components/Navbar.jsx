@@ -60,12 +60,12 @@ function Navbar() {
               Join
             </Link>
 
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="hover:text-york-red transition-colors py-2"
             >
               Contact
-            </a>
+            </Link>
           </div>
 
           {/* Minimalist Action Button */}
