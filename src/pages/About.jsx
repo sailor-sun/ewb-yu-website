@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import "./About.css";
+import Navbar from "../components/Navbar";
 
 const stats = [
   { value: "12+", label: "Events this year" },
@@ -11,25 +12,9 @@ const stats = [
 
 export default function About() {
   return (
+    <>
+      <Navbar />
     <section className="hero" id="about">
-
-      <motion.div
-        className="hero__logo-stage"
-        initial={{ opacity: 0, scale: 0.6, rotate: -8 }}
-        animate={{ opacity: 1, scale: 1, rotate: 0 }}
-        transition={{
-          duration: 0.9,
-          ease: [0.25, 1, 0.5, 1],
-        }}
-      >
-        <div className="hero__logo-glow" aria-hidden="true" />
-
-        <img
-          src="/logo-EWB.png"
-          alt="EWB York University Logo"
-          className="hero__logo"
-        />
-      </motion.div>
 
       <motion.p
         className="hero__eyebrow"
@@ -66,20 +51,6 @@ export default function About() {
         here&apos;s what we&apos;re up to this term at Lassonde.
       </motion.p>
 
-      <motion.div
-        className="hero__cta-row"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.55, duration: 0.6 }}
-      >
-        <a href="#events" className="btn btn--primary">
-          See all events
-        </a>
-
-        <a href="#contact" className="btn btn--ghost">
-          Join the club
-        </a>
-      </motion.div>
 
       <motion.ul
         className="hero__stats"
@@ -111,5 +82,11 @@ export default function About() {
       </motion.ul>
 
     </section>
+    <footer className="bg-white border-t border-gray-100 py-12 text-center relative z-10">
+        <p className="text-gray-400 text-xs tracking-widest uppercase font-semibold">
+          © 2026 EWB York University Chapter
+        </p>
+      </footer>
+    </>
   );
 }
