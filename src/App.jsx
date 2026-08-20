@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Events from "./pages/Events";
 import About from "./pages/About";
 import Join from "./pages/Join";
-import ContactPage from "./pages/contact/ContactPage";
+import ContactPage from "./pages/ContactPage";
 
 
 function App() {
