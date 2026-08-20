@@ -1,7 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import "./About.css";
+import Navbar from "../components/Navbar";
 
 const stats = [
   { value: "12+", label: "Events this year" },
@@ -11,105 +12,117 @@ const stats = [
 
 export default function About() {
   return (
-    <section className="hero" id="about">
+    <>
+      <Navbar />
 
-      <motion.div
-        className="hero__logo-stage"
-        initial={{ opacity: 0, scale: 0.6, rotate: -8 }}
-        animate={{ opacity: 1, scale: 1, rotate: 0 }}
-        transition={{
-          duration: 0.9,
-          ease: [0.25, 1, 0.5, 1],
-        }}
-      >
-        <div className="hero__logo-glow" aria-hidden="true" />
+      <section className="hero" id="about">
 
-        <img
-          src="/logo-EWB.png"
-          alt="EWB York University Logo"
-          className="hero__logo"
-        />
-      </motion.div>
+        {/* MOTION TEMPORARILY DISABLED
+        <motion.p
+          className="hero__eyebrow"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15, duration: 0.5 }}
+        >
+        */}
 
-      <motion.p
-        className="hero__eyebrow"
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.15, duration: 0.5 }}
-      >
-        <Sparkles size={14} aria-hidden="true" />
-        <span>Engineers Without Borders · York University</span>
-      </motion.p>
+        <p className="hero__eyebrow">
+          <Sparkles size={14} aria-hidden="true" />
+          <span>Engineers Without Borders · York University</span>
+        </p>
 
-      <motion.h1
-        className="hero__title"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.25,
-          duration: 0.7,
-          ease: [0.25, 1, 0.5, 1],
-        }}
-      >
-        Build <span className="hero__accent">change</span>,
-        <br />
-        one event at a time.
-      </motion.h1>
+        {/* </motion.p> */}
 
-      <motion.p
-        className="hero__lede"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.7 }}
-      >
-        From campus campaigns and fundraisers to national conferences —
-        here&apos;s what we&apos;re up to this term at Lassonde.
-      </motion.p>
 
-      <motion.div
-        className="hero__cta-row"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.55, duration: 0.6 }}
-      >
-        <a href="#events" className="btn btn--primary">
-          See all events
-        </a>
+        {/* MOTION TEMPORARILY DISABLED
+        <motion.h1
+          className="hero__title"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            delay: 0.25,
+            duration: 0.7,
+            ease: [0.25, 1, 0.5, 1],
+          }}
+        >
+        */}
 
-        <a href="#contact" className="btn btn--ghost">
-          Join the club
-        </a>
-      </motion.div>
+        <h1 className="hero__title">
+          Build <span className="hero__accent">change</span>,
+          <br />
+          one event at a time.
+        </h1>
 
-      <motion.ul
-        className="hero__stats"
-        initial="hidden"
-        animate="show"
-        variants={{
-          hidden: {},
-          show: {
-            transition: {
-              staggerChildren: 0.1,
-              delayChildren: 0.7,
+        {/* </motion.h1> */}
+
+
+        {/* MOTION TEMPORARILY DISABLED
+        <motion.p
+          className="hero__lede"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4, duration: 0.7 }}
+        >
+        */}
+
+        <p className="hero__lede">
+          From campus campaigns and fundraisers to national conferences —
+          here&apos;s what we&apos;re up to this term at Lassonde.
+        </p>
+
+        {/* </motion.p> */}
+
+
+        {/* MOTION TEMPORARILY DISABLED
+        <motion.ul
+          className="hero__stats"
+          initial="hidden"
+          animate="show"
+          variants={{
+            hidden: {},
+            show: {
+              transition: {
+                staggerChildren: 0.1,
+                delayChildren: 0.7,
+              },
             },
-          },
-        }}
-      >
-        {stats.map((stat) => (
-          <motion.li
-            key={stat.label}
-            className="hero__stat"
-            variants={{
-              hidden: { opacity: 0, y: 16 },
-              show: { opacity: 1, y: 0 },
-            }}
-          >
-            <span className="hero__stat-value">{stat.value}</span>
-            <span className="hero__stat-label">{stat.label}</span>
-          </motion.li>
-        ))}
-      </motion.ul>
+          }}
+        >
+        */}
 
-    </section>
+        <ul className="hero__stats">
+          {stats.map((stat) => (
+
+            /* MOTION TEMPORARILY DISABLED
+            <motion.li
+              key={stat.label}
+              className="hero__stat"
+              variants={{
+                hidden: { opacity: 0, y: 16 },
+                show: { opacity: 1, y: 0 },
+              }}
+            >
+            */
+
+            <li key={stat.label} className="hero__stat">
+              <span className="hero__stat-value">{stat.value}</span>
+              <span className="hero__stat-label">{stat.label}</span>
+            </li>
+
+            /* </motion.li> */
+
+          ))}
+        </ul>
+
+        {/* </motion.ul> */}
+
+      </section>
+
+      <footer className="bg-white border-t border-gray-100 py-12 text-center relative z-10">
+        <p className="text-gray-400 text-xs tracking-widest uppercase font-semibold">
+          © 2026 EWB York University Chapter
+        </p>
+      </footer>
+    </>
   );
 }
