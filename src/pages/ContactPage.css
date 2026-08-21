@@ -1,6 +1,6 @@
 .contact-page {
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 138px);
   background: #f1f1f1;
   color: #111111;
   overflow: hidden;
@@ -10,7 +10,11 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(17, 17, 17, 0.15) 1px, transparent 1.2px);
+  background-image: radial-gradient(
+    circle,
+    rgba(17, 17, 17, 0.15) 1px,
+    transparent 1.2px
+  );
   background-size: 14px 14px;
   opacity: 0.9;
 }
@@ -18,10 +22,19 @@
 .contact-page__inner {
   position: relative;
   z-index: 1;
+
   max-width: 1500px;
+  min-height: calc(100vh - 138px);
+
   margin: 0 auto;
   padding: 48px 52px 36px;
+
+  display: flex;
+  flex-direction: column;
 }
+
+
+/* ───────── BRAND ───────── */
 
 .contact-page__brand-block {
   display: flex;
@@ -34,13 +47,17 @@
   display: flex;
   align-items: center;
   gap: 0.06em;
+
   margin: 0;
-  font-size: clamp(5.8rem, 10.5vw, 16rem);
+
+  font-size: clamp(4rem, 8vw, 11rem);
   line-height: 0.82;
   letter-spacing: -0.085em;
   font-weight: 900;
+
   font-family: "Arial Black", "Segoe UI", sans-serif;
   text-transform: uppercase;
+
   color: #111111;
 }
 
@@ -51,29 +68,16 @@
 .contact-page__cross {
   position: relative;
   display: inline-block;
+
   color: #d91f26;
+
   line-height: 1;
   transform: translateY(-0.02em);
+
   font-weight: 900;
   font-size: 0.76em;
+
   padding: 0 0.14em;
-}
-
-.contact-page__cross::before,
-.contact-page__cross::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 1.25em;
-  height: 0.1em;
-  background: #d91f26;
-  border-radius: 999px;
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.contact-page__cross::after {
-  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 .contact-page__u-wrap {
@@ -83,47 +87,54 @@
 
 .contact-page__u {
   display: inline-block;
-  font-size: clamp(5.1rem, 9.3vw, 13rem);
+
+  font-size: clamp(3.5rem, 7vw, 9rem);
   line-height: 0.8;
   letter-spacing: -0.085em;
   font-weight: 900;
+
   font-family: "Arial Black", "Segoe UI", sans-serif;
   text-transform: uppercase;
+
   color: #111111;
 }
 
-.contact-page__meta {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.4rem 2.4rem;
-  width: min(560px, 100%);
-  margin-left: auto;
-  margin-top: -0.6rem;
-}
 
-.contact-page__column {
+/* ───────── REACH ───────── */
+
+.contact-page__reach {
+  margin: auto;
+
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  align-items: center;
+
+  text-align: center;
 }
 
 .contact-page__label {
-  margin: 0;
+  margin: 0 0 1rem;
+
   font-size: 0.74rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 700;
+
   color: rgba(17, 17, 17, 0.55);
 }
 
 .contact-page__stack {
   display: flex;
   flex-direction: column;
+  align-items: center;
+
   gap: 0.45rem;
+
   font-size: clamp(0.9rem, 1vw, 1.2rem);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+
   color: #111111;
 }
 
@@ -138,22 +149,30 @@
   color: #d91f26;
 }
 
+
+/* ───────── ADDRESS ───────── */
+
 .contact-page__address {
-  margin-top: 2.2rem;
-  max-width: 780px;
+  margin-top: auto;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  max-width: 780px;
+
   font-family: Georgia, "Times New Roman", serif;
   font-style: italic;
+
   color: #111111;
 }
 
 .contact-page__address-line {
   margin: 0;
-  font-size: clamp(1.7rem, 2.5vw, 4rem);
-  line-height: 1.2;
-  letter-spacing: -0.05em;
+
+  font-size: clamp(1rem, 1.4vw, 1.5rem);
+  line-height: 1.35;
+  letter-spacing: -0.02em;
   font-weight: 400;
 }
 
@@ -161,27 +180,23 @@
   font-style: italic;
 }
 
+
+/* ───────── TABLET ───────── */
+
 @media (max-width: 980px) {
   .contact-page__inner {
     padding: 34px 22px 26px;
   }
 
-  .contact-page__meta {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 2rem;
-  }
   .contact-page__title {
     letter-spacing: -0.065em;
   }
 }
 
-@media (max-width: 640px) {
-  .contact-page__meta {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
 
+/* ───────── MOBILE ───────── */
+
+@media (max-width: 640px) {
   .contact-page__title {
     flex-wrap: wrap;
     gap: 0.08em;
@@ -193,7 +208,11 @@
     letter-spacing: -0.06em;
   }
 
+  .contact-page__reach {
+    margin: 3rem auto;
+  }
+
   .contact-page__address-line {
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
 }

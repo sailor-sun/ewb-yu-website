@@ -43,7 +43,7 @@ function Footer() {
               <ul className="space-y-3 text-sm font-bold uppercase tracking-wide text-gray-900">
                 <li>
                   <a
-                    href="mailto:york@ewb.ca"
+                    href="mailto:yorku@chapter.ewb.ca"
                     className="hover:text-york-red transition-colors"
                   >
                     yorku@chapter.ewb.ca
