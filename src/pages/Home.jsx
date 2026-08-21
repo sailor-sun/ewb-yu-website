@@ -78,7 +78,7 @@ function Home() {
 
             <div className="flex items-center gap-3 text-xs font-bold tracking-widest text-gray-500 uppercase mb-4">
               <div className="w-10 h-[1.5px] bg-gray-900"></div>
-              <span> York U</span> 
+              <span> York U</span>
             </div>
 
             <h1 className="text-6xl sm:text-7xl xl:text-8xl font-black tracking-tighter text-york-red uppercase leading-[0.85]">
@@ -139,7 +139,7 @@ function Home() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-16">
             <div>
               <p className="text-york-red font-bold text-xs uppercase tracking-widest mb-3">
-               — Portfolio
+                — Portfolio
               </p>
 
               <h2 className="text-6xl sm:text-7xl xl:text-8xl font-black tracking-tighter uppercase leading-[0.9]">
@@ -155,21 +155,20 @@ function Home() {
             <div className="pt-10 md:pt-0 md:px-10 first:md:pl-0 last:md:pr-0">
               <div className="flex items-center justify-between mb-8">
                 <span className="border border-white/30 text-white/80 text-[10px] font-bold uppercase tracking-widest px-3 py-1">
-                  Water
+                  Advocacy
                 </span>
 
                 <span className="text-4xl font-black text-white/20">01</span>
               </div>
 
               <h3 className="text-3xl font-bold uppercase tracking-tight leading-[1.05] mb-4">
-                Lilongwe
+                Flip the Switch:
                 <br />
-                Filtration
+                MP Talk
               </h3>
 
               <p className="text-gray-400 leading-relaxed mb-6">
-                Co-designed low-cost ceramic filters with three village
-                councils.
+                Spoke with an MP about our Flip the Switch project and its goals for creating meaningful change.
               </p>
 
               {/* <a
@@ -185,21 +184,20 @@ function Home() {
             <div className="pt-10 md:pt-0 md:px-10 first:md:pl-0 last:md:pr-0">
               <div className="flex items-center justify-between mb-8">
                 <span className="border border-white/30 text-white/80 text-[10px] font-bold uppercase tracking-widest px-3 py-1">
-                  Policy
+                  Fundraiser
                 </span>
 
                 <span className="text-4xl font-black text-white/20">02</span>
               </div>
 
               <h3 className="text-3xl font-bold uppercase tracking-tight leading-[1.05] mb-4">
-                Fair Trade
+                $148 Raised for
                 <br />
-                Audit
+                Kids In Tech
               </h3>
 
               <p className="text-gray-400 leading-relaxed mb-6">
-                Open dataset on supply-chain transparency for student
-                procurement.
+                Raised $148 through a fundraiser supporting technology-focused opportunities for kids.
               </p>
 
               {/* <a
@@ -215,21 +213,20 @@ function Home() {
             <div className="pt-10 md:pt-0 md:px-10 first:md:pl-0 last:md:pr-0">
               <div className="flex items-center justify-between mb-8">
                 <span className="border border-white/30 text-white/80 text-[10px] font-bold uppercase tracking-widest px-3 py-1">
-                  Energy
+                  Project
                 </span>
 
                 <span className="text-4xl font-black text-white/20">03</span>
               </div>
 
               <h3 className="text-3xl font-bold uppercase tracking-tight leading-[1.05] mb-4">
-                Solar
+                EWB YorkU
                 <br />
-                Microgrid
+                Website Launch
               </h3>
 
               <p className="text-gray-400 leading-relaxed mb-6">
-                Pilot 4kW community grid serving a school in northern Ghana.
-              </p>
+                Launching our new chapter website in September 2026 to showcase our projects, events, and impact.              </p>
 
               {/* <a
                 href="#"
