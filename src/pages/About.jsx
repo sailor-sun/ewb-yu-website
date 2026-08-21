@@ -5,9 +5,9 @@ import "./About.css";
 import Navbar from "../components/Navbar";
 
 const stats = [
-  { value: "12+", label: "Events this year" },
-  { value: "80+", label: "Active members" },
-  { value: "5", label: "Partner chapters" },
+  { value: "4+", label: "Events" },
+  { value: "$140+", label: "Funds Raised" },
+  { value: "1", label: "Project" },
 ];
 
 export default function About() {
@@ -65,10 +65,31 @@ export default function About() {
         >
         */}
 
-        <p className="hero__lede">
+       
+
+<p className="hero__lede">
+  <strong>EWB YorkU</strong> was initiated in{" "}
+  <a
+    href="https://www.yorku.ca/yfile/2003/03/28/engineers-remove-borders/"
+    target="_blank"
+    rel="noreferrer"
+    className="font-bold underline hover:text-york-red transition-colors"
+  >
+    2003
+  </a>{" "}
+  as a student chapter of Engineers Without Borders Canada. Since then, our
+  chapter has worked to empower students to become <strong>changemakers</strong>{" "}
+  through sustainability workshops, advocacy campaigns, and community-driven
+  projects. We also support Indigenous communities, promote fair trade, and
+  advocate for a more{" "}
+  <strong>globally conscious engineering curriculum</strong>.
+</p>
+
+         <p className="hero__lede">
           From campus campaigns and fundraisers to national conferences —
-          here&apos;s what we&apos;re up to this term at Lassonde.
+          here&apos;s what we&apos;re up to in 2025 at Lassonde.
         </p>
+
 
         {/* </motion.p> */}
 
@@ -115,6 +136,7 @@ export default function About() {
         </ul>
 
         {/* </motion.ul> */}
+
 
       </section>
 
