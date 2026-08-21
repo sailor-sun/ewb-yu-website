@@ -53,12 +53,12 @@ function Navbar() {
               Events
             </Link>
 
-            <Link
+            {/* <Link
               to="/join"
               className="hover:text-york-red transition-colors py-2"
             >
               Join
-            </Link>
+            </Link> */}
 
             <Link
               to="/contact"
@@ -69,12 +69,15 @@ function Navbar() {
           </div>
 
           {/* Minimalist Action Button */}
-          <button className="bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-york-red transition-colors flex items-center gap-2 group">
-            Apply
+          <Link
+            to="/join"
+            className="bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-york-red transition-colors flex items-center gap-2 group"
+          >
+            Join Us
             <span className="group-hover:translate-x-1 transition-transform">
               →
             </span>
-          </button>
+          </Link>
 
         </div>
       </header>
