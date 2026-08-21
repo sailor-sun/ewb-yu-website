@@ -28,3 +28,5 @@ This website provides information about the chapter, its projects, events, and w
 This website was developed by the Engineers Without Borders team.
 - Project Lead
 - Team members
+
+© 2026 Engineers Without Borders York University Chapter
