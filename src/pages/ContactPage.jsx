@@ -33,7 +33,7 @@ function ContactPage() {
 
           {/* Reach — Center */}
           <div className="contact-page__reach">
-            <p className="contact-page__label">Reach</p>
+            <p className="contact-page__label">Reach Out</p>
 
             <div className="contact-page__stack">
               <a href="mailto:yorku@chapter.ewb.ca">
@@ -60,7 +60,7 @@ function ContactPage() {
 
 
           {/* Address — Bottom Left */}
-          <div className="contact-page__address">
+          {/* <div className="contact-page__address">
             <p className="contact-page__address-line">
               Bergeron Centre for Engineering Excellence
             </p>
@@ -68,7 +68,7 @@ function ContactPage() {
             <p className="contact-page__address-line">
               4700 Keele St, Toronto, ON.
             </p>
-          </div>
+          </div> */}
 
         </div>
       </main>
