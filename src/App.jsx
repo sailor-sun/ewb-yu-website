@@ -6,18 +6,21 @@ import Events from "./pages/Events";
 import About from "./pages/About";
 import Join from "./pages/Join";
 import ContactPage from "./pages/ContactPage";
-
+import Canonical from "./components/Canonical";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/events" element={<Events />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/join" element={<Join />} />
-      <Route path="/contact" element={<ContactPage />} />
+    <>
+      <Canonical />
 
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/join" element={<Join />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </>
   );
 }
 
