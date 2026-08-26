@@ -1,6 +1,7 @@
 import React from "react";
 import { Sparkles } from "lucide-react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const stats = [
   { value: "4+", label: "Events" },
@@ -107,11 +108,7 @@ export default function About() {
 
       </main>
 
-      <footer className="bg-white border-t border-gray-100 py-12 text-center relative z-10">
-        <p className="text-gray-400 text-xs tracking-widest uppercase font-semibold">
-          © 2026 EWB York University Chapter
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }
