@@ -13,11 +13,13 @@ function Navbar() {
 
           {/* Logo & Chapter Brand */}
           <div className="flex items-center gap-4">
-            <img
-              src="/logo-EWB.png"
-              alt="EWB Logo"
-              className="h-14 w-14 object-contain"
-            />
+            <Link to="/">
+              <img
+                src="/logo-EWB.png"
+                alt="EWB Logo"
+                className="h-14 w-14 object-contain"
+              />
+            </Link>
 
             <div className="h-10 w-[1px] bg-gray-300 hidden sm:block"></div>
 
