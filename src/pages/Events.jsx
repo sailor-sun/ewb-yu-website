@@ -124,9 +124,9 @@ function Events() {
             <div className="w-full h-[400px] perspective-1000 group">
 
               {/* <div className="w-full h-full relative transform-style-3d duration-700 group-hover:rotate-y-180 shadow-sm hover:shadow-xl rounded-xl"> */}
-              <div className="w-full h-full relative transform-style-3d duration-700 shadow-sm hover:shadow-xl rounded-xl">
+              <div className="w-full h-full relative transform-style-3d duration-700">
                 {/* FRONT */}
-                <div className="absolute w-full h-full bg-white border border-gray-100 rounded-xl overflow-hidden backface-hidden flex flex-col">
+                <div className="absolute w-full h-full bg-white border-[2px] border-black overflow-hidden backface-hidden flex flex-col shadow-[8px_8px_0px_0px_rgba(0,0,0,0.05)]">
 
                   <div className="h-48 bg-gray-200 overflow-hidden">
                     <img
@@ -204,9 +204,9 @@ function Events() {
             <div className="w-full h-[400px] perspective-1000 group">
 
               {/* <div className="w-full h-full relative transform-style-3d duration-700 group-hover:rotate-y-180 shadow-sm hover:shadow-xl rounded-xl"> */}
-              <div className="w-full h-full relative transform-style-3d duration-700 shadow-sm hover:shadow-xl rounded-xl">
+              <div className="w-full h-full relative transform-style-3d duration-700">
                 {/* FRONT */}
-                <div className="absolute w-full h-full bg-white border border-gray-100 rounded-xl overflow-hidden backface-hidden flex flex-col">
+                <div className="absolute w-full h-full bg-white border-[2px] border-black overflow-hidden backface-hidden flex flex-col shadow-[8px_8px_0px_0px_rgba(0,0,0,0.05)]">
 
                   <div className="h-48 bg-gray-200 overflow-hidden">
                     <img
@@ -286,9 +286,9 @@ function Events() {
             <div className="w-full h-[400px] perspective-1000 group">
 
               {/* <div className="w-full h-full relative transform-style-3d duration-700 group-hover:rotate-y-180 shadow-sm hover:shadow-xl rounded-xl"> */}
-              <div className="w-full h-full relative transform-style-3d duration-700 shadow-sm hover:shadow-xl rounded-xl">
+              <div className="w-full h-full relative transform-style-3d duration-700">
                 {/* FRONT */}
-                <div className="absolute w-full h-full bg-white border border-gray-100 rounded-xl overflow-hidden backface-hidden flex flex-col">
+                <div className="absolute w-full h-full bg-white border-[2px] border-black overflow-hidden backface-hidden flex flex-col shadow-[8px_8px_0px_0px_rgba(0,0,0,0.05)]">
 
                   <div className="h-48 bg-gray-200 overflow-hidden">
                     <img
