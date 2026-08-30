@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router";
+import { Menu, X } from "lucide-react";
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <>
       {/* --- TOP HEADER (WHITE) --- */}
-      <header className="bg-white border-b border-gray-100 relative z-10">
+      <header className="bg-white border-b border-gray-100 relative z-50">
         <div className="max-w-7xl mx-auto px-6 h-24 flex justify-between items-center">
 
           {/* Logo & Chapter Brand */}
           <div className="flex items-center gap-4">
-            <img
-              src="/logo-EWB.png"
-              alt="EWB Logo"
-              className="h-14 w-14 object-contain"
-            />
+            <Link to="/">
+              <img
+                src="/logo-EWB.png"
+                alt="EWB Logo"
+                className="h-14 w-14 object-contain"
+              />
+            </Link>
 
             <div className="h-10 w-[1px] bg-gray-300 hidden sm:block"></div>
 
@@ -68,10 +73,21 @@ function Navbar() {
             </Link>
           </div>
 
+          {/* Mobile Menu Toggle */}
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen((open) => !open)}
+            className="md:hidden flex items-center justify-center p-2 -mr-2 text-gray-900"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMenuOpen}
+          >
+            {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+
           {/* Minimalist Action Button */}
           <Link
             to="/join"
-            className="bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-york-red transition-colors flex items-center gap-2 group"
+            className="hidden md:flex bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-york-red transition-colors items-center gap-2 group"
           >
             Join Us
             <span className="group-hover:translate-x-1 transition-transform">
@@ -80,6 +96,51 @@ function Navbar() {
           </Link>
 
         </div>
+
+        {/* Mobile Menu Panel */}
+        {isMenuOpen && (
+          <div className="md:hidden absolute top-24 left-0 w-full bg-white border-b border-gray-100 shadow-lg z-20 flex flex-col">
+            <Link
+              to="/"
+              onClick={() => setIsMenuOpen(false)}
+              className="px-6 py-4 border-b border-gray-100 text-xs font-bold uppercase tracking-widest text-gray-900 hover:text-york-red hover:bg-gray-50 transition-colors"
+            >
+              Home
+            </Link>
+
+            <Link
+              to="/about"
+              onClick={() => setIsMenuOpen(false)}
+              className="px-6 py-4 border-b border-gray-100 text-xs font-bold uppercase tracking-widest text-gray-900 hover:text-york-red hover:bg-gray-50 transition-colors"
+            >
+              About
+            </Link>
+
+            <Link
+              to="/events"
+              onClick={() => setIsMenuOpen(false)}
+              className="px-6 py-4 border-b border-gray-100 text-xs font-bold uppercase tracking-widest text-gray-900 hover:text-york-red hover:bg-gray-50 transition-colors"
+            >
+              Events
+            </Link>
+
+            <Link
+              to="/contact"
+              onClick={() => setIsMenuOpen(false)}
+              className="px-6 py-4 border-b border-gray-100 text-xs font-bold uppercase tracking-widest text-gray-900 hover:text-york-red hover:bg-gray-50 transition-colors"
+            >
+              Contact
+            </Link>
+
+            <Link
+              to="/join"
+              onClick={() => setIsMenuOpen(false)}
+              className="px-6 py-4 text-xs font-bold uppercase tracking-widest text-york-red hover:bg-gray-50 transition-colors"
+            >
+              Join Us →
+            </Link>
+          </div>
+        )}
       </header>
 
       {/* --- MOVING TEXT NAV BAR (RED MARQUEE) --- */}
