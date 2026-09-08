@@ -82,6 +82,151 @@ export default function About() {
       </motion.ul>
 
     </section>
+
+
+<section className="chapter-structure">
+  <div className="chapter-structure__intro">
+    <p className="chapter-structure__eyebrow">How We're Organized</p>
+    <h2>How our chapter works</h2>
+    <p>
+      Our chapter is organized through an executive team, general members,
+      and project-based programs led by students.
+    </p>
+  </div>
+
+  <div className="org-chart">
+
+    <div className="org-card org-card--top">
+      Co-Presidents
+    </div>
+
+    <div className="branch-connector branch-connector--main">
+      <div className="branch-connector__vertical" />
+      <div className="branch-connector__horizontal" />
+
+      <div className="branch-connector__drops">
+        <span />
+        <span />
+        <span />
+      </div>
+    </div>
+
+    <div className="org-groups">
+
+      {/* EXECUTIVE TEAM */}
+      <div className="org-group">
+        <div className="org-card org-card--title">
+          Executive Team
+        </div>
+
+        <div className="org-arrow">↓</div>
+
+        <div className="org-card">Vice President</div>
+        <div className="org-card">VP Advocacy</div>
+        <div className="org-card">VP Events</div>
+        <div className="org-card">VP Marketing</div>
+
+        <div className="org-arrow">↓</div>
+
+        <div className="org-card org-card--member">
+          Finance Associates
+        </div>
+
+        <div className="org-card org-card--member">
+          Events Associates
+        </div>
+
+        <div className="org-card org-card--member">
+          Advocacy Associate
+        </div>
+      </div>
+
+      {/* GENERAL MEMBERS */}
+      <div className="org-group">
+        <div className="org-card org-card--title">
+          General Members
+        </div>
+
+        <div className="org-arrow">↓</div>
+
+        <div className="org-card">
+          Chapter Members
+        </div>
+
+        <div className="org-card org-card--member">
+          Specific Project Members
+        </div>
+
+        <div className="org-card org-card--member">
+          Volunteers
+        </div>
+
+        <div className="org-card org-card--member">
+          Event Participants
+        </div>
+      </div>
+
+      {/* PROGRAMS */}
+      <div className="org-group org-group--projects">
+        <div className="org-card org-card--title">
+          Programs
+        </div>
+
+        <div className="branch-connector branch-connector--two">
+          <div className="branch-connector__vertical" />
+          <div className="branch-connector__horizontal" />
+
+          <div className="branch-connector__drops branch-connector__drops--two">
+            <span />
+            <span />
+          </div>
+        </div>
+
+        <div className="project-grid project-grid--two">
+
+          <div className="project-column">
+            <div className="org-card">
+              Technical Projects
+            </div>
+
+            <div className="org-arrow">↓</div>
+
+            <div className="org-card org-card--lead">
+              Project Leads
+            </div>
+
+            <div className="org-arrow">↓</div>
+
+            <div className="org-card org-card--member">
+              Qualified Project Contributors
+            </div>
+          </div>
+
+          <div className="project-column">
+            <div className="org-card">
+              Community Projects
+            </div>
+
+            <div className="org-arrow">↓</div>
+
+            <div className="org-card org-card--lead">
+              Project Leads
+            </div>
+
+            <div className="org-arrow">↓</div>
+
+            <div className="org-card org-card--member">
+              Qualified Project Contributors
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
     <footer className="bg-white border-t border-gray-100 py-12 text-center relative z-10">
         <p className="text-gray-400 text-xs tracking-widest uppercase font-semibold">
           © 2026 EWB York University Chapter

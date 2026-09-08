@@ -458,5 +458,212 @@
   .hero__title {
     letter-spacing: -1px;
   }
+}
 
+ /* ─────────────────────── CHAPTER STRUCTURE ─────────────────────── */
+
+.chapter-structure {
+  --red: #bc1d24;
+  --text: #121417;
+  --muted: #f5f1e8;
+  --blue: #edf3fb;
+  --pink: #f8dddd;
+  --border: #d1d5db;
+
+  max-width: 1200px;
+  margin: 7rem auto 0;
+  padding: 0 clamp(1rem, 4vw, 2.5rem) 6rem;
+}
+
+.chapter-structure__intro {
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+
+.chapter-structure__eyebrow {
+  color: var(--red);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+
+.chapter-structure__intro h2 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  margin: 0.4rem 0 1rem;
+}
+
+.chapter-structure__intro p {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Main chart */
+
+.org-chart {
+  text-align: center;
+}
+
+.org-groups {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.org-group {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 1.5rem;
+}
+
+/* Cards */
+
+.org-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  margin-bottom: 0.7rem;
+  font-weight: 600;
+}
+
+.org-card--top {
+  display: inline-block;
+  min-width: 220px;
+  background: var(--text);
+  color: white;
+  border-color: var(--text);
+  font-size: 1.05rem;
+}
+
+.org-card--title {
+  background: var(--red);
+  color: white;
+  border-color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.org-card--lead {
+  background: var(--blue);
+}
+
+.org-card--member {
+  background: var(--muted);
+}
+
+.org-card--general {
+  background: var(--pink);
+}
+
+/* Simple down arrows */
+
+.org-arrow {
+  margin: 0.35rem 0 0.7rem;
+  color: #6b7280;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* Project columns */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.project-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Branch connectors */
+
+.branch-connector {
+  position: relative;
+  width: 100%;
+  height: 70px;
+}
+
+.branch-connector__vertical {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 28px;
+  background: #9ca3af;
+  transform: translateX(-50%);
+}
+
+.branch-connector__horizontal {
+  position: absolute;
+  top: 28px;
+  left: 16.5%;
+  right: 16.5%;
+  height: 2px;
+  background: #9ca3af;
+}
+
+.branch-connector__drops {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.branch-connector__drops span {
+  position: relative;
+  height: 34px;
+}
+
+.branch-connector__drops span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 16px;
+  background: #9ca3af;
+  transform: translateX(-50%);
+}
+
+.branch-connector__drops span::after {
+  content: "↓";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+
+  color: #6b7280;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+/* Two-way split inside Programs */
+
+.branch-connector--two .branch-connector__horizontal {
+  left: 25%;
+  right: 25%;
+}
+
+.branch-connector__drops--two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Responsive layout */
+
+@media (max-width: 1000px) {
+  .org-groups,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .branch-connector--two {
+    display: none;
+  }
 }
