@@ -61,7 +61,16 @@ function Footer() {
                   </a>
                 </li>
 
-                <li>Facebook / EWBYork</li>
+                <li>
+                  <a
+                    href="https://www.facebook.com/ewbyork/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-york-red transition-colors"
+                  >
+                    Facebook / EWBYork
+                  </a>
+                </li>
               </ul>
             </div>
 {/* 
