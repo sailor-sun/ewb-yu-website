@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSearchParams } from "react-router";
 import "./ContactPage.css";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const CHAPTER_EMAIL = "yorku@chapter.ewb.ca";
 
@@ -191,58 +192,6 @@ function ContactPage() {
     <>
       <Navbar />
 
-      <main className="contact-page">
-        <div className="contact-page__inner">
-
-          {/* Brand */}
-          <div className="contact-page__brand-block">
-            <h1
-              className="contact-page__title"
-              aria-label="EWB York University"
-            >
-              <span className="contact-page__word">EWB</span>
-              <span
-                className="contact-page__cross"
-                aria-hidden="true"
-              >
-                ×
-              </span>
-            </h1>
-
-            <div className="contact-page__u-wrap">
-              <span className="contact-page__u">York U.</span>
-            </div>
-          </div>
-
-
-          {/* Reach — Center */}
-          <div className="contact-page__reach">
-            <p className="contact-page__label">Reach Out</p>
-
-            <div className="contact-page__stack">
-              <a href={`mailto:${CHAPTER_EMAIL}`}>
-                {CHAPTER_EMAIL}
-              </a>
-
-              <a
-                href="https://www.instagram.com/ewbyorku/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                @EWBYORKU
-              </a>
-
-              <a
-                href="https://www.facebook.com/ewbyork/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                FACEBOOK / EWBYORK
-              </a>
-            </div>
-          </div>
-
-
           {/* Address — Bottom Left */}
           {/* <div className="contact-page__address">
             <p className="contact-page__address-line">
@@ -254,22 +203,19 @@ function ContactPage() {
             </p>
           </div> */}
 
-        </div>
+<main className="contact-page pt-16 md:pt-24">
+  <section
+    className="contact-form"
+    aria-labelledby="contact-form-heading"
+  >
+    <div className="contact-form__inner">
+      <ContactForm />
+    </div>
+  </section>
+</main>
 
-        <section className="contact-form" aria-labelledby="contact-form-heading">
-          <div className="contact-form__inner">
-            <ContactForm />
-          </div>
-        </section>
-      </main>
 
-
-      {/* Footer */}
-      <footer className="bg-white border-t border-gray-100 py-12 text-center relative z-10">
-        <p className="text-gray-400 text-xs tracking-widest uppercase font-semibold">
-          © 2026 EWB York University Chapter
-        </p>
-      </footer>
+<Footer />
     </>
   );
 }
