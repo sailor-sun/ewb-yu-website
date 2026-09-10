@@ -9,11 +9,27 @@ const stats = [
   { value: "1", label: "Project" },
 ];
 
+const executiveRoles = [
+  "Vice President",
+  "VP Advocacy",
+  "VP Events",
+  "VP Marketing",
+  "Finance Associates",
+  "Events Associates",
+  "Advocacy Associate",
+];
+
+const generalMembers = [
+  "Chapter Members",
+  "Specific Project Members",
+  "Volunteers",
+  "Event Participants",
+];
+
 export default function About() {
   return (
     <div className="min-h-screen bg-[#fafafa] font-sans antialiased relative overflow-x-hidden selection:bg-york-red selection:text-white">
 
-      {/* Injecting custom keyframes and 3D card flipping styles */}
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }
@@ -44,14 +60,94 @@ export default function About() {
           -webkit-text-stroke: 2px #bc1d24;
           color: transparent;
         }
+
+        /* Organization chart connector */
+
+        .branch {
+          position: relative;
+          height: 70px;
+          width: 100%;
+        }
+
+        .branch-line {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 2px;
+          height: 28px;
+          background: #9ca3af;
+          transform: translateX(-50%);
+        }
+
+        .branch-horizontal {
+          position: absolute;
+          top: 28px;
+          left: 16.5%;
+          right: 16.5%;
+          height: 2px;
+          background: #9ca3af;
+        }
+
+        .branch-drops {
+          position: absolute;
+          top: 28px;
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .branch-drops span {
+          position: relative;
+          height: 35px;
+        }
+
+        .branch-drops span::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 2px;
+          height: 16px;
+          background: #9ca3af;
+          transform: translateX(-50%);
+        }
+
+        .branch-drops span::after {
+          content: "↓";
+          position: absolute;
+          left: 50%;
+          bottom: -6px;
+          transform: translateX(-50%);
+          color: #6b7280;
+          font-size: 1.4rem;
+          line-height: 1;
+        }
+
+        .branch-two .branch-horizontal {
+          left: 25%;
+          right: 25%;
+        }
+
+        .branch-two .branch-drops {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 900px) {
+          .branch {
+            display: none;
+          }
+        }
       `}</style>
 
       <Navbar />
 
       <main className="max-w-7xl mx-auto px-6 py-16 md:py-24 relative z-10">
 
+        {/* ABOUT INTRO */}
+
         <div className="flex items-center gap-3 text-xs font-bold tracking-widest text-gray-500 uppercase mb-4">
           <div className="w-10 h-[1.5px] bg-gray-900"></div>
+
           <span className="inline-flex items-center gap-2">
             <Sparkles size={14} aria-hidden="true" />
             Engineers Without Borders · York University
@@ -99,12 +195,171 @@ export default function About() {
               <span className="text-3xl sm:text-4xl font-black text-york-red tracking-tighter">
                 {stat.value}
               </span>
+
               <span className="text-xs font-bold uppercase tracking-widest text-gray-500">
                 {stat.label}
               </span>
             </div>
           ))}
         </div>
+
+        {/* ORGANIZATION CHART */}
+
+        <section className="mt-24 md:mt-32">
+
+          <div className="max-w-2xl mb-14">
+            <p className="text-xs font-bold tracking-widest text-york-red uppercase mb-3">
+              How We're Organized
+            </p>
+
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900">
+              How our chapter works
+            </h2>
+
+            <p className="mt-4 text-gray-600 leading-relaxed">
+              Our chapter is made up of an executive team, general members,
+              and student-led programs working together across EWB YorkU.
+            </p>
+          </div>
+
+          <div className="text-center">
+
+            {/* CO-PRESIDENTS */}
+
+            <div className="inline-block min-w-[220px] bg-gray-900 text-white font-bold px-8 py-5 rounded-2xl">
+              CO-PRESIDENTS
+            </div>
+
+            {/* THREE-WAY BRANCH */}
+
+            <div className="branch">
+              <div className="branch-line"></div>
+              <div className="branch-horizontal"></div>
+
+              <div className="branch-drops">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            {/* THREE MAIN GROUPS */}
+
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr_2fr] gap-6 items-start">
+
+              {/* EXECUTIVE TEAM */}
+
+              <div className="border border-gray-300 bg-white rounded-3xl p-6">
+                <div className="bg-york-red text-white rounded-2xl px-5 py-5 font-bold uppercase tracking-wide">
+                  Executive Team
+                </div>
+
+                <div className="text-2xl text-gray-500 my-3">↓</div>
+
+                <div className="space-y-3">
+                  {executiveRoles.map((role, index) => (
+                    <div
+                      key={role}
+                      className={`border border-gray-300 rounded-xl px-4 py-4 font-semibold ${
+                        index >= 4 ? "bg-[#f5f1e8]" : "bg-white"
+                      }`}
+                    >
+                      {role}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* GENERAL MEMBERS */}
+
+              <div className="border border-gray-300 bg-white rounded-3xl p-6">
+                <div className="bg-york-red text-white rounded-2xl px-5 py-5 font-bold uppercase tracking-wide">
+                  General Members
+                </div>
+
+                <div className="text-2xl text-gray-500 my-3">↓</div>
+
+                <div className="space-y-3">
+                  {generalMembers.map((member, index) => (
+                    <div
+                      key={member}
+                      className={`border border-gray-300 rounded-xl px-4 py-4 font-semibold ${
+                        index > 0 ? "bg-[#f5f1e8]" : "bg-white"
+                      }`}
+                    >
+                      {member}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* PROGRAMS */}
+
+              <div className="border border-gray-300 bg-white rounded-3xl p-6">
+                <div className="bg-york-red text-white rounded-2xl px-5 py-5 font-bold uppercase tracking-wide">
+                  Programs
+                </div>
+
+                {/* TWO-WAY BRANCH */}
+
+                <div className="branch branch-two">
+                  <div className="branch-line"></div>
+                  <div className="branch-horizontal"></div>
+
+                  <div className="branch-drops">
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                  {/* TECHNICAL PROJECTS */}
+
+                  <div>
+                    <div className="border border-gray-300 rounded-xl px-4 py-4 font-semibold bg-white">
+                      Technical Projects
+                    </div>
+
+                    <div className="text-2xl text-gray-500 my-3">↓</div>
+
+                    <div className="border border-gray-300 rounded-xl px-4 py-4 font-semibold bg-[#edf3fb]">
+                      Project Leads
+                    </div>
+
+                    <div className="text-2xl text-gray-500 my-3">↓</div>
+
+                    <div className="border border-gray-300 rounded-xl px-4 py-4 font-semibold bg-[#f5f1e8]">
+                      Qualified Project Contributors
+                    </div>
+                  </div>
+
+                  {/* COMMUNITY PROJECTS */}
+
+                  <div>
+                    <div className="border border-gray-300 rounded-xl px-4 py-4 font-semibold bg-white">
+                      Community Projects
+                    </div>
+
+                    <div className="text-2xl text-gray-500 my-3">↓</div>
+
+                    <div className="border border-gray-300 rounded-xl px-4 py-4 font-semibold bg-[#edf3fb]">
+                      Project Leads
+                    </div>
+
+                    <div className="text-2xl text-gray-500 my-3">↓</div>
+
+                    <div className="border border-gray-300 rounded-xl px-4 py-4 font-semibold bg-[#f5f1e8]">
+                      Qualified Project Contributors
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
 
       </main>
 
