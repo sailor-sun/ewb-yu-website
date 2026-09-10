@@ -206,21 +206,20 @@ export default function About() {
         {/* ORGANIZATION CHART */}
 
         <section className="mt-24 md:mt-32">
+<div className="max-w-2xl mb-14">
+  <p className="text-xs font-bold tracking-widest text-gray-500 uppercase mb-4">
+    How We're Organized
+  </p>
 
-          <div className="max-w-2xl mb-14">
-            <p className="text-xs font-bold tracking-widest text-york-red uppercase mb-3">
-              How We're Organized
-            </p>
+  <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 uppercase leading-[0.95]">
+    How our chapter works
+  </h2>
 
-            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900">
-              How our chapter works
-            </h2>
-
-            <p className="mt-4 text-gray-600 leading-relaxed">
-              Our chapter is made up of an executive team, general members,
-              and student-led programs working together across EWB YorkU.
-            </p>
-          </div>
+  <p className="mt-6 text-lg text-gray-700 leading-relaxed">
+    Our chapter is made up of an executive team, general members,
+    and student-led programs working together across EWB YorkU.
+  </p>
+</div>
 
           <div className="text-center">
 
