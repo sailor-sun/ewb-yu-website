@@ -73,9 +73,9 @@ export default function About() {
           position: absolute;
           top: 0;
           left: 50%;
-          width: 2px;
+          width: 3px;
           height: 28px;
-          background: #9ca3af;
+          background: #000000;
           transform: translateX(-50%);
         }
 
@@ -84,8 +84,8 @@ export default function About() {
           top: 28px;
           left: 16.5%;
           right: 16.5%;
-          height: 2px;
-          background: #9ca3af;
+          height: 3px;
+          background: #000000;
         }
 
         .branch-drops {
@@ -106,9 +106,9 @@ export default function About() {
           position: absolute;
           top: 0;
           left: 50%;
-          width: 2px;
+          width: 3px;
           height: 16px;
-          background: #9ca3af;
+          background: #000000;
           transform: translateX(-50%);
         }
 
@@ -118,7 +118,8 @@ export default function About() {
           left: 50%;
           bottom: -6px;
           transform: translateX(-50%);
-          color: #6b7280;
+          font-family: Arial, Helvetica, sans-serif;
+          color: #000000;
           font-size: 1.4rem;
           line-height: 1;
         }
@@ -205,27 +206,28 @@ export default function About() {
 
         {/* ORGANIZATION CHART */}
 
-        <section className="mt-24 md:mt-32">
-<div className="max-w-2xl mb-14">
-  <p className="text-xs font-bold tracking-widest text-gray-500 uppercase mb-4">
-    How We're Organized
-  </p>
+        <section className="mt-16 md:mt-20 relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[#eeeae2] border-t-4 border-black py-16 md:py-20 -mb-16 md:-mb-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-2xl mb-14">
+            <p className="text-xs font-bold tracking-widest text-gray-500 uppercase mb-4">
+              How We're Organized
+            </p>
 
-  <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 uppercase leading-[0.95]">
-    How our chapter works
-  </h2>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight text-gray-900 uppercase leading-[0.95]">
+              How our chapter works
+            </h2>
 
-  <p className="mt-6 text-lg text-gray-700 leading-relaxed">
-    Our chapter is made up of an executive team, general members,
-    and student-led programs working together across EWB YorkU.
-  </p>
-</div>
+            <p className="mt-6 text-lg text-gray-700 leading-relaxed">
+              Our chapter is made up of an executive team, general members,
+              and student-led programs working together across EWB YorkU.
+            </p>
+          </div>
 
           <div className="text-center">
 
             {/* CO-PRESIDENTS */}
 
-            <div className="inline-block min-w-[220px] bg-gray-900 text-white font-bold px-8 py-5 rounded-2xl">
+            <div className="inline-block min-w-[220px] bg-york-red text-white font-black px-8 py-5 border-[3px] border-black uppercase tracking-wide shadow-[9px_9px_0px_0px_rgba(0,0,0,1)]">
               CO-PRESIDENTS
             </div>
 
@@ -248,116 +250,124 @@ export default function About() {
 
               {/* EXECUTIVE TEAM */}
 
-              <div className="border border-gray-300 bg-white rounded-3xl p-6">
-                <div className="bg-york-red text-white rounded-2xl px-5 py-5 font-bold uppercase tracking-wide">
+              <div className="border-[3px] border-black bg-white shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-transform duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+                <div className="bg-black text-white px-5 py-5 font-bold uppercase tracking-wide">
                   Executive Team
                 </div>
 
-                <div className="text-2xl text-gray-500 my-3">↓</div>
+                <div className="px-4 pt-3">
+                  <div className="text-2xl text-black text-center mb-1">↓</div>
 
-                <div className="space-y-3">
-                  {executiveRoles.map((role, index) => (
-                    <div
-                      key={role}
-                      className={`border border-gray-300 rounded-xl px-4 py-4 font-semibold ${
-                        index >= 4 ? "bg-[#f5f1e8]" : "bg-white"
-                      }`}
-                    >
-                      {role}
-                    </div>
-                  ))}
+                  <div className="pb-4">
+                    {executiveRoles.map((role, index) => (
+                      <div
+                        key={role}
+                        className={`border-b-2 border-black last:border-b-0 px-1 py-[0.85rem] font-semibold ${
+                          index >= 4 ? "bg-gray-100" : "bg-white"
+                        }`}
+                      >
+                        {role}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
               {/* GENERAL MEMBERS */}
 
-              <div className="border border-gray-300 bg-white rounded-3xl p-6">
-                <div className="bg-york-red text-white rounded-2xl px-5 py-5 font-bold uppercase tracking-wide">
+              <div className="border-[3px] border-black bg-white shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-transform duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+                <div className="bg-black text-white px-5 py-5 font-bold uppercase tracking-wide">
                   General Members
                 </div>
 
-                <div className="text-2xl text-gray-500 my-3">↓</div>
+                <div className="px-4 pt-3">
+                  <div className="text-2xl text-black text-center mb-1">↓</div>
 
-                <div className="space-y-3">
-                  {generalMembers.map((member, index) => (
-                    <div
-                      key={member}
-                      className={`border border-gray-300 rounded-xl px-4 py-4 font-semibold ${
-                        index > 0 ? "bg-[#f5f1e8]" : "bg-white"
-                      }`}
-                    >
-                      {member}
-                    </div>
-                  ))}
+                  <div className="pb-4">
+                    {generalMembers.map((member, index) => (
+                      <div
+                        key={member}
+                        className={`border-b-2 border-black last:border-b-0 px-1 py-[0.85rem] font-semibold ${
+                          index > 0 ? "bg-gray-100" : "bg-white"
+                        }`}
+                      >
+                        {member}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 
               {/* PROGRAMS */}
 
-              <div className="border border-gray-300 bg-white rounded-3xl p-6">
-                <div className="bg-york-red text-white rounded-2xl px-5 py-5 font-bold uppercase tracking-wide">
+              <div className="border-[3px] border-black bg-white shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] transition-transform duration-150 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+                <div className="bg-black text-white px-5 py-5 font-bold uppercase tracking-wide">
                   Programs
                 </div>
 
-                {/* TWO-WAY BRANCH */}
+                <div className="px-5 pt-2 pb-5">
 
-                <div className="branch branch-two">
-                  <div className="branch-line"></div>
-                  <div className="branch-horizontal"></div>
+                  {/* TWO-WAY BRANCH */}
 
-                  <div className="branch-drops">
-                    <span></span>
-                    <span></span>
-                  </div>
-                </div>
+                  <div className="branch branch-two">
+                    <div className="branch-line"></div>
+                    <div className="branch-horizontal"></div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-
-                  {/* TECHNICAL PROJECTS */}
-
-                  <div>
-                    <div className="border border-gray-300 rounded-xl px-4 py-4 font-semibold bg-white">
-                      Technical Projects
-                    </div>
-
-                    <div className="text-2xl text-gray-500 my-3">↓</div>
-
-                    <div className="border border-gray-300 rounded-xl px-4 py-4 font-semibold bg-[#edf3fb]">
-                      Project Leads
-                    </div>
-
-                    <div className="text-2xl text-gray-500 my-3">↓</div>
-
-                    <div className="border border-gray-300 rounded-xl px-4 py-4 font-semibold bg-[#f5f1e8]">
-                      Qualified Project Contributors
+                    <div className="branch-drops">
+                      <span></span>
+                      <span></span>
                     </div>
                   </div>
 
-                  {/* COMMUNITY PROJECTS */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
-                  <div>
-                    <div className="border border-gray-300 rounded-xl px-4 py-4 font-semibold bg-white">
-                      Community Projects
+                    {/* TECHNICAL PROJECTS */}
+
+                    <div>
+                      <div className="border-[2px] border-black px-4 py-[0.65rem] text-center font-semibold bg-white">
+                        Technical Projects
+                      </div>
+
+                      <div className="text-2xl text-black text-center my-2">↓</div>
+
+                      <div className="border-[2px] border-black px-4 py-[0.65rem] text-center font-semibold bg-gray-100">
+                        Project Leads
+                      </div>
+
+                      <div className="text-2xl text-black text-center my-2">↓</div>
+
+                      <div className="border-[2px] border-black px-4 py-[0.65rem] text-center font-semibold bg-black text-white">
+                        Qualified Project Contributors
+                      </div>
                     </div>
 
-                    <div className="text-2xl text-gray-500 my-3">↓</div>
+                    {/* COMMUNITY PROJECTS */}
 
-                    <div className="border border-gray-300 rounded-xl px-4 py-4 font-semibold bg-[#edf3fb]">
-                      Project Leads
+                    <div>
+                      <div className="border-[2px] border-black px-4 py-[0.65rem] text-center font-semibold bg-white">
+                        Community Projects
+                      </div>
+
+                      <div className="text-2xl text-black text-center my-2">↓</div>
+
+                      <div className="border-[2px] border-black px-4 py-[0.65rem] text-center font-semibold bg-gray-100">
+                        Project Leads
+                      </div>
+
+                      <div className="text-2xl text-black text-center my-2">↓</div>
+
+                      <div className="border-[2px] border-black px-4 py-[0.65rem] text-center font-semibold bg-black text-white">
+                        Qualified Project Contributors
+                      </div>
                     </div>
 
-                    <div className="text-2xl text-gray-500 my-3">↓</div>
-
-                    <div className="border border-gray-300 rounded-xl px-4 py-4 font-semibold bg-[#f5f1e8]">
-                      Qualified Project Contributors
-                    </div>
                   </div>
-
                 </div>
               </div>
 
             </div>
           </div>
+        </div>
         </section>
 
       </main>
