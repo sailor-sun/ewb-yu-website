@@ -25,6 +25,13 @@ This website provides information about the chapter, its projects, events, and w
 - Cloudflare 
 - Vercel
 
+## Content Notes
+- **Homepage — Top-right image:** This space can be repurposed to highlight upcoming events, campaigns, or other timely announcements when needed.
+
+## Future Updates
+- Mailing list subscription
+- Dynamic event card updates from Instagram post links  
+
 This website was developed by the Engineers Without Borders team.
 - Project Lead
 - Team members
