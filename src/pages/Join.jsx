@@ -128,7 +128,7 @@ function Join() {
             </h3>
 
             <p className="text-gray-600 mt-4 leading-relaxed">
-              No forms, no fees. Follow us on Instagram or Facebook to stay in the loop on
+              No forms, no fees. Follow us on Instagram, Facebook or LinkedIn to stay in the loop on
               meetings, workshops, and events — that's it, you're a member.
             </p>
 <div className="flex flex-col items-start gap-3 mt-6">
@@ -151,6 +151,18 @@ function Join() {
     className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-york-red transition-colors group"
   >
     FACEBOOK
+    <span className="group-hover:translate-x-1 transition-transform">
+      →
+    </span>
+  </a>
+
+    <a
+    href="https://www.linkedin.com/in/ewb-york-university-chapter-43655a34b/"
+    target="_blank"
+    rel="noreferrer"
+    className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 text-xs font-bold uppercase tracking-widest hover:bg-york-red transition-colors group"
+  >
+    LINKEDIN
     <span className="group-hover:translate-x-1 transition-transform">
       →
     </span>

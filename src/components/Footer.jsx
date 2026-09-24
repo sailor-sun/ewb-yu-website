@@ -68,7 +68,18 @@ function Footer() {
                     rel="noreferrer"
                     className="hover:text-york-red transition-colors"
                   >
-                    Facebook / EWBYork
+                    Facebook / EWB York
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/ewb-york-university-chapter-43655a34b/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-york-red transition-colors"
+                  >
+                    Linkedin / EWB YorkU
                   </a>
                 </li>
               </ul>
