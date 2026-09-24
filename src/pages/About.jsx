@@ -4,8 +4,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const stats = [
-  { value: "4+", label: "Events" },
-  { value: "$140+", label: "Funds Raised" },
+  { value: "17+", label: "Events" },
+  { value: "3+", label: "Workshops" },
   { value: "1", label: "Project" },
 ];
 

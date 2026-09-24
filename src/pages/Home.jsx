@@ -191,13 +191,13 @@ function Home() {
               </div>
 
               <h3 className="text-3xl font-bold uppercase tracking-tight leading-[1.05] mb-4">
-                $148 Raised for
+                Raised funds for
                 <br />
                 Kids In Tech
               </h3>
 
               <p className="text-gray-400 leading-relaxed mb-6">
-                Raised $148 through a fundraiser supporting technology-focused opportunities for kids.
+                Raised funds through a fundraiser supporting technology-focused opportunities for kids.
               </p>
 
               {/* <a
@@ -222,11 +222,11 @@ function Home() {
               <h3 className="text-3xl font-bold uppercase tracking-tight leading-[1.05] mb-4">
                 EWB YorkU
                 <br />
-                Website Launch
+                Meeting with MP
               </h3>
 
               <p className="text-gray-400 leading-relaxed mb-6">
-                Launching our new chapter website in September 2026 to showcase our projects, events, and impact.              </p>
+                We had the honour of meeting with MP Judy Sgro to discuss the Flip the Switch campaign and its goals. </p>
 
               {/* <a
                 href="#"
