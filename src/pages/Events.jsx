@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import xchangeImg from "./assets/xchange.avif";
 import legoImg from "./assets/lego.jpg";
 import fundraiserImg from "./assets/fundraiser.jpg";
+import flipSwitchImg from "./assets/flip-switch.png";
 
 function Events() {
   return (
@@ -362,6 +363,46 @@ function Events() {
                   </button>
 
                 </div> */}
+
+              </div>
+            </div>
+
+            {/* Event Card 4 */}
+            <div className="w-full h-[400px] perspective-1000 group">
+
+              <div className="w-full h-full relative transform-style-3d duration-700">
+
+                {/* FRONT */}
+                <div className="absolute w-full h-full bg-white border-[2px] border-black overflow-hidden backface-hidden flex flex-col shadow-[8px_8px_0px_0px_rgba(0,0,0,0.05)]">
+
+                  <div className="h-48 bg-gray-200 overflow-hidden">
+                    <img
+                      src={flipSwitchImg}
+                      alt="Flip the Switch campaign talk with MP"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+
+                  <div className="p-6 flex-1 flex flex-col justify-between">
+
+                    <div>
+
+                      <span className="text-york-red font-bold text-xs uppercase tracking-wider">
+                        CAMPAIGN TALK
+                      </span>
+
+                      <h3 className="text-xl font-bold mt-2 text-gray-900">
+                        Flip the Switch: MP Talk
+                      </h3>
+
+                      <p className="text-gray-600 mt-3 text-sm leading-relaxed">
+                        We had the honour of meeting with MP Judy Sgro to discuss the Flip the Switch campaign and its goals for creating meaningful change.
+                      </p>
+
+                    </div>
+
+                  </div>
+                </div>
 
               </div>
             </div>
