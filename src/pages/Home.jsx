@@ -213,20 +213,21 @@ function Home() {
             <div className="pt-10 md:pt-0 md:px-10 first:md:pl-0 last:md:pr-0">
               <div className="flex items-center justify-between mb-8">
                 <span className="border border-white/30 text-white/80 text-[10px] font-bold uppercase tracking-widest px-3 py-1">
-                  Project
+                  Event
                 </span>
 
                 <span className="text-4xl font-black text-white/20">03</span>
               </div>
 
               <h3 className="text-3xl font-bold uppercase tracking-tight leading-[1.05] mb-4">
-                EWB YorkU
+                Annual
                 <br />
-                Meeting with MP
+                Lego Event
               </h3>
 
               <p className="text-gray-400 leading-relaxed mb-6">
-                We had the honour of meeting with MP Judy Sgro to discuss the Flip the Switch campaign and its goals. </p>
+                Our annual themed LEGO De-Stressor gives students a chance to unwind, get creative, and connect with others while taking a break from school.
+                 </p>
 
               {/* <a
                 href="#"
