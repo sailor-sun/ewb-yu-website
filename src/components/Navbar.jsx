@@ -65,6 +65,15 @@ function Navbar() {
               Join
             </Link> */}
 
+
+            <Link
+              to="/gallery"
+              className="hover:text-york-red transition-colors py-2"
+            >
+              Gallery
+            </Link>
+
+
             <Link
               to="/contact"
               className="hover:text-york-red transition-colors py-2"
@@ -83,6 +92,7 @@ function Navbar() {
           >
             {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
+
 
           {/* Minimalist Action Button */}
           <Link
@@ -123,6 +133,8 @@ function Navbar() {
             >
               Events
             </Link>
+
+            <Link to="/gallery" onClick={() => setIsMenuOpen(false)} className="px-6 py-4 border-b border-gray-100 text-xs font-bold uppercase tracking-widest text-gray-900 hover:text-york-red hover:bg-gray-50 transition-colors" > Gallery </Link>
 
             <Link
               to="/contact"

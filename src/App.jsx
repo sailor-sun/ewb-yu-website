@@ -6,6 +6,7 @@ import Events from "./pages/Events";
 import About from "./pages/About";
 import Join from "./pages/Join";
 import ContactPage from "./pages/ContactPage";
+import Gallery from "./pages/Gallery";
 import NotFound from "./pages/NotFound";
 import Canonical from "./components/Canonical";
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/join" element={<Join />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
