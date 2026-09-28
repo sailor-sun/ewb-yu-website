@@ -1,14 +1,10 @@
-import React, { useState } from "react";
-import { useSearchParams } from "react-router";
+import { useState } from "react";
 import "./ContactPage.css";
 import Navbar from "../components/Navbar";
 
 const CHAPTER_EMAIL = "yorku@chapter.ewb.ca";
 
 function ContactForm() {
-  const [searchParams] = useSearchParams();
-  const alreadySent = searchParams.get("sent") === "1";
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
@@ -16,6 +12,8 @@ function ContactForm() {
   const [honey, setHoney] = useState("");
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [sendError, setSendError] = useState("");
 
   function validate() {
     const next = {};
@@ -29,23 +27,71 @@ function ContactForm() {
     return next;
   }
 
-  function handleSubmit(e) {
-    if (honey) {
-      e.preventDefault();
-      return;
-    }
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setSendError("");
+
+    if (honey) return;
 
     const next = validate();
     setErrors(next);
-    if (Object.keys(next).length > 0) {
-      e.preventDefault();
-      return;
-    }
+    if (Object.keys(next).length > 0) return;
 
+    const trimmedSubject = subject.trim();
     setSubmitting(true);
+
+    try {
+      const response = await fetch(
+        `https://formsubmit.co/ajax/${encodeURIComponent(CHAPTER_EMAIL)}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: name.trim(),
+            email: email.trim(),
+            subject: trimmedSubject,
+            message: message.trim(),
+            _subject: trimmedSubject
+              ? `EWB YorkU: ${trimmedSubject}`
+              : "New message from EWB YorkU website",
+            _template: "table",
+            _captcha: "false",
+            _replyto: email.trim(),
+            submitted: new Date().toISOString(),
+          }),
+        }
+      );
+
+      const data = await response.json().catch(() => null);
+      const delivered = data && String(data.success) === "true";
+
+      if (!delivered) {
+        const detail = typeof data?.message === "string" ? data.message : "";
+        setSendError(
+          /activat/i.test(detail)
+            ? `Open the confirmation email at ${CHAPTER_EMAIL}, click the link, then send this again.`
+            : "We couldn't send that. Try again, or email us directly."
+        );
+        return;
+      }
+
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+      setErrors({});
+      setSent(true);
+    } catch {
+      setSendError("We couldn't send that. Try again, or email us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
-  if (alreadySent) {
+  if (sent) {
     return (
       <div className="contact-form__success" role="status">
         <p className="contact-page__label">Sent</p>
@@ -56,6 +102,14 @@ function ContactForm() {
           We&apos;ll write back to the email you left. If it&apos;s urgent, reach us at{" "}
           <a href={`mailto:${CHAPTER_EMAIL}`}>{CHAPTER_EMAIL}</a>.
         </p>
+        <button
+          type="button"
+          className="contact-form__submit"
+          onClick={() => setSent(false)}
+        >
+          Send another message
+          <span aria-hidden="true"> →</span>
+        </button>
       </div>
     );
   }
@@ -71,25 +125,9 @@ function ContactForm() {
       </p>
     <form
       className="contact-form__form"
-      action={`https://formsubmit.co/${CHAPTER_EMAIL}`}
-      method="POST"
       onSubmit={handleSubmit}
       noValidate
     >
-      <input
-        type="hidden"
-        name="_next"
-        value={`${typeof window !== "undefined" ? window.location.origin : ""}/contact?sent=1`}
-      />
-      <input
-        type="hidden"
-        name="_subject"
-        value={subject.trim() ? `EWB YorkU: ${subject.trim()}` : "New message from EWB YorkU website"}
-      />
-      <input type="hidden" name="_template" value="table" />
-      <input type="hidden" name="_captcha" value="false" />
-      <input type="hidden" name="_replyto" value={email} />
-
       <label className="contact-form__honey" htmlFor="contact-website">
         Website
         <input
@@ -172,6 +210,12 @@ function ContactForm() {
           )}
         </div>
       </div>
+
+      {sendError && (
+        <p className="contact-form__error" role="alert">
+          {sendError}
+        </p>
+      )}
 
       <button
         type="submit"
